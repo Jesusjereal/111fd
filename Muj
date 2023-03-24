@@ -1,0 +1,55 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SKUTRJEGAY", "DarkTheme")
+
+--MAIN
+local NIGGER = Window:NewTab("NIGGER")
+local NIGGERSection = NIGGER:NewSection("Section Name")
+
+
+
+NIGGERSection:NewSlider("FAST", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+NIGGERSection:NewSlider("JUMP", "SliderInfo1", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+NIGGERSection:NewToggle("jumpkralikos", "ToggleInfo", function(state)
+    local InfiniteJumpEnabled = true
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+        end
+    end)
+    local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
+    InfiniteJump.Position = UDim2.new(0,10,0,130)
+    InfiniteJump.Size = UDim2.new(0,150,0,30)
+    InfiniteJump.MouseButton1Click:connect(function()
+        local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
+        local new = state == "Off" and "On" or state == "On" and "Off"
+        InfiniteJumpEnabled = new == "On"
+        InfiniteJump.Text = "Infinite Jump: " .. new
+    end)
+end)
+
+NIGGERSection:NewToggle("letec", "ToggleInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6wt3jFLN", true))()
+
+end)
+
+
+local ESP = Window:NewTab("ESP")
+local ESPSection = ESP:NewSection("ESP")
+
+
+ESPSection:NewButton("ESPMENU", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/destr/main/df.txt", true))()
+
+end)
+
+local AIMBOT = Window:NewTab("AIMBOT")
+local AIMBOTSection = AIMBOT:NewSection("AIMBOT")
+
+AIMBOTSection:NewButton("SILENT", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/GdD51tfb", true))()
+end)
