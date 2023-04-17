@@ -142,7 +142,7 @@ local Slider = Main:CreateSlider({
  local Button = TROLL:CreateButton({
     Name = "InfHed",
     Callback = function()
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/INGGFHEHEH", true))()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/phuse", true))()
     end,
  })
 
