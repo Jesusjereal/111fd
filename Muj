@@ -1,55 +1,149 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("SKUTRJEGAY", "DarkTheme")
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
---MAIN
-local NIGGER = Window:NewTab("NIGGER")
-local NIGGERSection = NIGGER:NewSection("Section Name")
+local Window = Rayfield:CreateWindow({
+    Name = "Rayfiel1d Example Window",
+    LoadingTitle = "Rayfield Interface Suite",
+    LoadingSubtitle = "by Sirius",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Unti1tled",
+       Subtitle = "Ke1y System",
+       Note = "No meth1od of obtaining the key is provided",
+       FileName = "Ke1y", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+local Main = Window:CreateTab("Colovek", 4483132458) -- Title, Image
+local Section = Main:CreateSection("")
+
+local FLY = Window:CreateTab("LEtec", 8964489645) -- Title, Image
+local Section = FLY:CreateSection("")
+
+local ESP = Window:CreateTab("ESP", 8964489645) -- Title, Image
+local Section = ESP:CreateSection("")
+
+local TROLL = Window:CreateTab("TROLL", 8964489645) -- Title, Image
+local Section = TROLL:CreateSection("")
+
+local Slider = Main:CreateSlider({
+    Name = "fastttr",
+    Range = {0, 500},
+    Increment = 10,
+    Suffix = "Ryycl",
+    CurrentValue = 10,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end,
+ })
+
+ local Slider = Main:CreateSlider({
+    Name = "Jumppr",
+    Range = {0, 500},
+    Increment = 10,
+    Suffix = "Klokanos",
+    CurrentValue = 10,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end,
+ })
+
+ local Button = Main:CreateButton({
+    Name = "jumpkralikos",
+    Callback = function(state)
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+        local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
+        InfiniteJump.Position = UDim2.new(0,10,0,130)
+        InfiniteJump.Size = UDim2.new(0,150,0,30)
+        InfiniteJump.MouseButton1Click:connect(function()
+            local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
+            local new = state == "Off" and "On" or state == "On" and "Off"
+            InfiniteJumpEnabled = new == "On"
+            InfiniteJump.Text = "Infinite Jump: " .. new
+        end)
+    end
+ })
+
+ local Button = FLY:CreateButton({
+    Name = "letadlos",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/6wt3jFLN", true))()
+    end,
+ })
+
+ local Button = ESP:CreateButton({
+    Name = "Okosjaksvin",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/destr/main/df.txt", true))()
+    end,
+ })
+
+ local Button = Main:CreateButton({
+    Name = "NosmrtosNEfugn",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/GOD", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "Chat",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/CHHHA", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "WORM",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/(PATCHED)%20%20fe_snake%5Cworm.Lua", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "CHHHH",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts/main/rickroll.Lua", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "MApniceni",
+    Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/uSXxEq4Q", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "MluvicEN",
+    Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/sxrGYZeG", true))()
+    end,
+ })
+
+ local Button = TROLL:CreateButton({
+    Name = "InfHed",
+    Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/111fd/main/INGGFHEHEH", true))()
+    end,
+ })
 
 
-
-NIGGERSection:NewSlider("FAST", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-NIGGERSection:NewSlider("JUMP", "SliderInfo1", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
-
-NIGGERSection:NewToggle("jumpkralikos", "ToggleInfo", function(state)
-    local InfiniteJumpEnabled = true
-    game:GetService("UserInputService").JumpRequest:connect(function()
-        if InfiniteJumpEnabled then
-            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-        end
-    end)
-    local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
-    InfiniteJump.Position = UDim2.new(0,10,0,130)
-    InfiniteJump.Size = UDim2.new(0,150,0,30)
-    InfiniteJump.MouseButton1Click:connect(function()
-        local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
-        local new = state == "Off" and "On" or state == "On" and "Off"
-        InfiniteJumpEnabled = new == "On"
-        InfiniteJump.Text = "Infinite Jump: " .. new
-    end)
-end)
-
-NIGGERSection:NewToggle("letec", "ToggleInfo", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/6wt3jFLN", true))()
-
-end)
-
-
-local ESP = Window:NewTab("ESP")
-local ESPSection = ESP:NewSection("ESP")
-
-
-ESPSection:NewButton("ESPMENU", "ButtonInfo", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Jesusjereal/destr/main/df.txt", true))()
-
-end)
-
-local AIMBOT = Window:NewTab("AIMBOT")
-local AIMBOTSection = AIMBOT:NewSection("AIMBOT")
-
-AIMBOTSection:NewButton("SILENT", "ButtonInfo", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/GdD51tfb", true))()
-end)
